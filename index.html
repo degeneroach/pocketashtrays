@@ -34,7 +34,7 @@
       "name": "Custom Pocket Ashtrays",
       "url": "https://custompocketashtray.com/",
       "logo": "https://custompocketashtray.com/images/logo.jpg",
-      "email": "sales@custompocketashtray.com",
+      "email": "custompocketashtray@gmail.com",
       "description": "Custom printed pocket ashtrays for municipalities, business improvement areas, events and corporate brands."
     },
     {
@@ -48,10 +48,10 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type":"Question","name":"What is a pocket ashtray?","acceptedAnswer":{"@type":"Answer","text":"A pocket ashtray is a small, reusable, fire-resistant pouch that lets smokers extinguish and carry cigarette butts until they reach a proper bin, keeping filters out of streets, storm drains, parks and beaches."}},
-        {"@type":"Question","name":"What is the minimum order for custom pocket ashtrays?","acceptedAnswer":{"@type":"Answer","text":"We print in-house on a UV flatbed printer, so we can handle small runs for events and local businesses as well as large-volume programs for cities and corporate accounts. Contact us with your quantity for pricing."}},
-        {"@type":"Question","name":"Can you print our full-colour logo?","acceptedAnswer":{"@type":"Answer","text":"Yes. We print full-colour artwork, gradients and fine detail directly onto the pouch with UV-cured ink. We send a digital proof for approval before production."}},
+        {"@type":"Question","name":"What is the minimum order for custom pocket ashtrays?","acceptedAnswer":{"@type":"Answer","text":"We print in-house on a UV flatbed printer, so we can handle small runs for events and local businesses as well as large-volume programs for cities and corporate accounts. Email us at custompocketashtray@gmail.com with your quantity for pricing."}},
+        {"@type":"Question","name":"Can you print our full-colour logo?","acceptedAnswer":{"@type":"Answer","text":"Yes. We print full-colour artwork, gradients and fine detail directly onto the pouch with UV-cured ink. We send a digital mock-up for your approval before anything is printed."}},
         {"@type":"Question","name":"Do you work with municipalities and public tenders?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cities, regional districts, parks departments and business improvement areas are our primary focus. We can provide formal quotes, volume pricing and scheduled releases for multi-phase programs."}},
-        {"@type":"Question","name":"How long does production take?","acceptedAnswer":{"@type":"Answer","text":"Turnaround depends on quantity and the time of year. Small runs are typically quick once the proof is approved; large program orders are scheduled with you up front. Ask for current lead times when you request a quote."}}
+        {"@type":"Question","name":"How long does production take?","acceptedAnswer":{"@type":"Answer","text":"Turnaround depends on quantity and the time of year. Small runs are typically quick once your mock-up is approved, and large program orders are scheduled with you up front. Need it fast? We can accommodate last-minute rush orders, just tell us your deadline."}}
       ]
     }
   ]
@@ -88,6 +88,12 @@ section{padding:88px 0}
 
 /* header */
 header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar{background:var(--navy-dk);color:#cfe0ee;font-size:.85rem}
+.topbar-in{display:flex;justify-content:space-between;align-items:center;gap:12px;height:34px}
+.topbar a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.topbar a:hover{color:#7fd492}
+.topbar svg{width:15px;height:15px;fill:none;stroke:#7fd492;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:600px){.tb-note{display:none}.topbar-in{justify-content:center}}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{width:44px;height:44px}
@@ -109,6 +115,8 @@ header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blu
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin:2rem 0 2.2rem}
 .trust{display:flex;gap:26px;flex-wrap:wrap;font-size:.92rem;color:#cfe0ee}
 .trust b{color:#fff}
+.hero-email{margin-top:1.2rem;font-size:.95rem}
+.hero-email a{color:#7fd492;font-weight:600}
 .hero-card{background:#fff;border-radius:22px;padding:34px;box-shadow:0 30px 60px rgba(0,0,0,.25);position:relative}
 .hero-card img{width:170px;margin:0 auto 18px}
 .hero-card h3{text-align:center;margin-bottom:14px}
@@ -152,12 +160,35 @@ header{position:sticky;top:0;z-index:50;background:#ffffffee;backdrop-filter:blu
 .tier li{padding-left:26px;position:relative;font-size:.97rem}
 .tier li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:3px;background:var(--green)}
 
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px;counter-reset:s}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
-.step{counter-increment:s;padding:26px;border-left:3px solid var(--green);background:var(--soft);border-radius:0 var(--radius) var(--radius) 0}
-.step::before{content:"0" counter(s);font:800 1.9rem Montserrat,sans-serif;color:var(--navy);opacity:.25;display:block;margin-bottom:6px}
+/* how to order */
+.order-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px}
+@media(max-width:900px){.order-steps{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto;gap:44px}}
+.ostep{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 26px 28px;text-align:center;transition:transform .25s,box-shadow .25s}
+.ostep:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,74,125,.1)}
+.ostep .num{position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:42px;height:42px;border-radius:50%;background:var(--green);color:#fff;font:800 1.15rem/42px Montserrat,sans-serif;box-shadow:0 6px 16px rgba(47,143,70,.35)}
+.ostep .art{background:linear-gradient(180deg,#eef5fa 0%,#f7fbfd 100%);border-radius:14px;padding:12px;margin:10px 0 22px}
+.ostep .art svg{width:100%;height:auto;display:block}
+.ostep h3{font-size:1.25rem}
+.ostep p{font-size:.98rem}
+.ostep:not(:last-child)::after{content:"";position:absolute;top:50%;right:-31px;width:22px;height:22px;transform:translateY(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h13M13 6l6 6-6 6' fill='none' stroke='%232f8f46' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+@media(max-width:900px){.ostep:not(:last-child)::after{top:auto;bottom:-36px;right:50%;transform:translateX(50%) rotate(90deg)}}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.pills span{font:700 .74rem Montserrat,sans-serif;letter-spacing:.04em;padding:6px 10px;border-radius:999px;background:var(--green-lt);color:var(--green)}
+.pills span.rush{background:#fff1e8;color:#d9541e}
+/* illustration motion */
+@keyframes uvSweep{0%,100%{transform:translateX(0)}50%{transform:translateX(96px)}}
+@keyframes speed{0%{transform:translateX(0);opacity:0}30%{opacity:1}100%{transform:translateX(-26px);opacity:0}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
+.uv-head{animation:uvSweep 3.2s ease-in-out infinite}
+.speed-line{animation:speed 1.1s linear infinite}
+.speed-line:nth-child(2){animation-delay:.35s}
+.speed-line:nth-child(3){animation-delay:.7s}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop 2.4s ease-in-out infinite}
+.twinkle{animation:twinkle 1.8s ease-in-out infinite}
+.twinkle.d2{animation-delay:.6s}
+.twinkle.d3{animation-delay:1.2s}
+@media(prefers-reduced-motion:reduce){.uv-head,.speed-line,.pop,.twinkle{animation:none}}
 
 /* print band */
 .band{background:var(--navy);color:#fff}
@@ -178,21 +209,13 @@ summary::after{content:"+";color:var(--green);font-size:1.4rem;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin-top:10px}
 
-/* quote */
-.quote{background:var(--soft)}
-.quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
-@media(max-width:900px){.quote-grid{grid-template-columns:1fr}}
-form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 20px 40px rgba(11,74,125,.06)}
-form .full{grid-column:1/-1}
-@media(max-width:600px){form{grid-template-columns:1fr;padding:22px}}
-label{font-size:.85rem;font-weight:600;color:var(--navy-dk);display:block;margin-bottom:6px}
-input,select,textarea{width:100%;font:inherit;font-size:.97rem;padding:.75rem .9rem;border:1px solid #c9d6e1;border-radius:9px;background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid #2f8f4655;border-color:var(--green)}
-textarea{min-height:110px;resize:vertical}
-.contact-list{list-style:none;display:grid;gap:14px;margin-top:24px}
-.contact-list li{display:flex;gap:12px;align-items:flex-start}
-.contact-list .ico{margin:0;width:40px;height:40px;flex:0 0 40px}
-.contact-list .ico svg{width:20px;height:20px}
+/* contact cta */
+.cta{background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 100%);color:#fff;text-align:center;padding:80px 0}
+.cta h2{color:#fff}
+.cta p{color:#cfe0ee}
+.cta .eyebrow{color:#7fd492}
+.cta .email{display:block;margin-top:18px;font:600 1.05rem Inter,sans-serif;color:#fff}
+.cta small{display:block;margin-top:10px;color:#9fc0da;font-size:.9rem}
 
 /* wildfire video banner */
 .fire{position:relative;min-height:78vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:radial-gradient(ellipse at 50% 80%,#7a2a0c 0%,#1a0a05 70%)}
@@ -215,6 +238,12 @@ footer .brand small{color:#9fc0da}
 <body>
 
 <header>
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <span class="tb-note">Small to large orders &middot; Rush orders available</span>
+      <a href="mailto:custompocketashtray@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>custompocketashtray@gmail.com</a>
+    </div>
+  </div>
   <nav class="wrap nav" aria-label="Main">
     <a href="#top" class="brand" aria-label="Custom Pocket Ashtrays home">
       <img src="images/icon.png" alt="Custom Pocket Ashtrays logo" width="44" height="44">
@@ -224,6 +253,7 @@ footer .brand small{color:#9fc0da}
       <li><a href="#municipal">For Cities</a></li>
       <li><a href="#uses">Who We Serve</a></li>
       <li><a href="#orders">Order Options</a></li>
+      <li><a href="#how-to-order">How to Order</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#quote" class="btn btn-primary">Get a Quote</a></li>
     </ul>
@@ -246,8 +276,9 @@ footer .brand small{color:#9fc0da}
       <div class="trust">
         <span><b>Full-colour</b> UV printing</span>
         <span><b>Bulk</b> &amp; small-run orders</span>
-        <span><b>Proof</b> before production</span>
+        <span><b>Mock-up</b> before production</span>
       </div>
+      <p class="hero-email">Questions? Email <a href="mailto:custompocketashtray@gmail.com">custompocketashtray@gmail.com</a></p>
     </div>
     <div class="hero-card">
       <img src="images/icon.png" alt="Custom pocket ashtray icon" width="170" height="170">
@@ -389,17 +420,110 @@ footer .brand small{color:#9fc0da}
   </div>
 </section>
 
-<!-- PROCESS -->
-<section>
+<!-- HOW TO ORDER -->
+<section id="how-to-order">
   <div class="wrap center">
-    <span class="eyebrow">How it works</span>
-    <h2>Four simple steps to your custom pocket ashtrays</h2>
+    <span class="eyebrow">How to order</span>
+    <h2>Ordering custom pocket ashtrays is as easy as 1, 2, 3</h2>
+    <p class="lead">From your first file to a box on your doorstep, here's how your branded pocket ashtrays come together.</p>
   </div>
-  <div class="wrap steps">
-    <div class="step"><h3>Request a quote</h3><p>Tell us your quantity, timeline and where the ashtrays will be distributed.</p></div>
-    <div class="step"><h3>Send your artwork</h3><p>Share your logo or campaign message. Vector files are ideal, but we can help with what you have.</p></div>
-    <div class="step"><h3>Approve your proof</h3><p>We send a digital proof showing exactly how your pocket ashtray will print.</p></div>
-    <div class="step"><h3>We print &amp; ship</h3><p>Your order is printed in-house, quality checked and shipped to your door.</p></div>
+  <div class="wrap order-steps">
+
+    <article class="ostep">
+      <span class="num">1</span>
+      <div class="art">
+        <svg viewBox="0 0 240 150" role="img" aria-label="Your artwork file turned into a digital mock-up of a printed pocket ashtray">
+          <path d="M22 28h52l16 16v78a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V34a6 6 0 0 1 6-6z" fill="#fff" stroke="#b9cfe0" stroke-width="2"/>
+          <path d="M74 28v12a4 4 0 0 0 4 4h12" fill="#e3edf5" stroke="#b9cfe0" stroke-width="2"/>
+          <circle cx="53" cy="70" r="17" fill="#e9f5ec"/>
+          <path d="M53 57c7 7 9 11 9 15a9 9 0 0 1-18 0c0-4 2-8 9-15z" fill="#2f8f46"/>
+          <path d="M53 66c3 3 4 5 4 7a4 4 0 0 1-8 0c0-2 1-4 4-7z" fill="#0b4a7d"/>
+          <rect x="30" y="97" width="46" height="5" rx="2.5" fill="#0b4a7d" opacity=".8"/>
+          <rect x="37" y="107" width="32" height="4" rx="2" fill="#0b4a7d" opacity=".35"/>
+          <path d="M100 78h26" stroke="#2f8f46" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 7"/>
+          <path d="M127 70l9 8-9 8" fill="none" stroke="#2f8f46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="none" stroke="#2f8f46" stroke-width="2.5" stroke-linecap="round">
+            <path d="M150 36v-10h10M216 26h10v10M226 116v10h-10M160 126h-10v-10"/>
+          </g>
+          <rect x="158" y="36" width="60" height="86" rx="12" fill="#0b4a7d"/>
+          <path d="M158 48a12 12 0 0 1 12-12h36a12 12 0 0 1 12 12v16q-30 13-60 0z" fill="#07304f"/>
+          <circle cx="188" cy="64" r="4" fill="#7fd492"/>
+          <rect x="172" y="80" width="32" height="32" rx="7" fill="#fff"/>
+          <image href="images/icon.png" x="174" y="82" width="28" height="28"/>
+          <rect x="162" y="132" width="52" height="14" rx="7" fill="#2f8f46"/>
+          <text x="188" y="142" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="7.5" fill="#fff" letter-spacing=".6">MOCK-UP</text>
+          <path class="twinkle" d="M232 18l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z" fill="#2f8f46"/>
+          <path class="twinkle d2" d="M142 112l1.2 3.6 3.6 1.2-3.6 1.2-1.2 3.6-1.2-3.6-3.6-1.2 3.6-1.2z" fill="#0b4a7d"/>
+        </svg>
+      </div>
+      <h3>Send us your artwork</h3>
+      <p>Email us your logo or design. We'll send back a digital mock-up showing exactly what your custom pocket ashtray will look like.</p>
+    </article>
+
+    <article class="ostep">
+      <span class="num">2</span>
+      <div class="art">
+        <svg viewBox="0 0 240 150" role="img" aria-label="Approved design being printed on a UV flatbed printer">
+          <rect x="44" y="128" width="160" height="6" rx="3" fill="#07304f" opacity=".18"/>
+          <rect x="36" y="96" width="176" height="32" rx="8" fill="#0b4a7d"/>
+          <rect x="182" y="106" width="22" height="12" rx="3" fill="#07304f"/>
+          <circle cx="188" cy="112" r="2" fill="#7fd492"/><circle cx="196" cy="112" r="2" fill="#ff8a4c"/>
+          <rect x="50" y="54" width="10" height="44" rx="3" fill="#07304f"/>
+          <rect x="188" y="54" width="10" height="44" rx="3" fill="#07304f"/>
+          <rect x="50" y="54" width="148" height="14" rx="5" fill="#07304f"/>
+          <g fill="#fff" stroke="#b9cfe0" stroke-width="1.5">
+            <rect x="68" y="86" width="30" height="10" rx="3"/>
+            <rect x="109" y="86" width="30" height="10" rx="3"/>
+            <rect x="150" y="86" width="30" height="10" rx="3"/>
+          </g>
+          <circle cx="83" cy="91" r="2.6" fill="#2f8f46"/><circle cx="124" cy="91" r="2.6" fill="#2f8f46"/><circle cx="165" cy="91" r="2.6" fill="#b9cfe0"/>
+          <g class="uv-head">
+            <path d="M66 82h20l7 14H59z" fill="#a78bfa" opacity=".45"/>
+            <rect x="62" y="64" width="28" height="19" rx="4" fill="#1d6aa5"/>
+            <rect x="64" y="80" width="24" height="3" rx="1.5" fill="#c4b5fd"/>
+          </g>
+          <g class="pop">
+            <circle cx="40" cy="34" r="20" fill="#2f8f46"/>
+            <path d="M31 34l6 6 12-12" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="66" y="38" font-family="Montserrat,sans-serif" font-weight="800" font-size="11" fill="#0b4a7d" letter-spacing=".8">APPROVED</text>
+        </svg>
+      </div>
+      <h3>Approve &amp; we print</h3>
+      <p>Happy with your mock-up? Give us the green light and your order goes straight to print on our in-house UV printer.</p>
+    </article>
+
+    <article class="ostep">
+      <span class="num">3</span>
+      <div class="art">
+        <svg viewBox="0 0 240 150" role="img" aria-label="Delivery truck shipping custom pocket ashtrays directly to you">
+          <line x1="16" y1="131" x2="226" y2="131" stroke="#dde5ec" stroke-width="2"/>
+          <g stroke="#9fc0da" stroke-width="3" stroke-linecap="round">
+            <line class="speed-line" x1="26" y1="72" x2="46" y2="72"/>
+            <line class="speed-line" x1="18" y1="88" x2="46" y2="88"/>
+            <line class="speed-line" x1="28" y1="104" x2="46" y2="104"/>
+          </g>
+          <rect x="54" y="48" width="112" height="68" rx="8" fill="#0b4a7d"/>
+          <rect x="93" y="63" width="34" height="34" rx="7" fill="#fff"/>
+          <image href="images/icon.png" x="95" y="65" width="30" height="30"/>
+          <path d="M166 68h26l18 22v26h-44z" fill="#2f8f46"/>
+          <path d="M172 74h17l13 16h-30z" fill="#e9f5ec"/>
+          <rect x="204" y="104" width="8" height="6" rx="2" fill="#ffd27a"/>
+          <circle cx="86" cy="118" r="12" fill="#1b2733"/><circle cx="86" cy="118" r="5" fill="#9fc0da"/>
+          <circle cx="186" cy="118" r="12" fill="#1b2733"/><circle cx="186" cy="118" r="5" fill="#9fc0da"/>
+          <g class="pop">
+            <circle cx="208" cy="34" r="19" fill="#ff8a4c"/>
+            <path d="M211 21l-10 15h7l-3 12 11-16h-7z" fill="#fff"/>
+          </g>        </svg>
+      </div>
+      <h3>Shipped directly to you</h3>
+      <p>Your custom pocket ashtrays are delivered straight to your door. Small to large order quantities available, and we can accommodate last-minute rush orders!</p>
+      <div class="pills"><span>Small runs</span><span>Large programs</span><span class="rush">Rush orders</span></div>
+    </article>
+
+  </div>
+  <div class="wrap center" style="margin-top:48px">
+    <a href="#quote" class="btn btn-primary">Start Your Order</a>
   </div>
 </section>
 
@@ -416,11 +540,11 @@ footer .brand small{color:#9fc0da}
     </details>
     <details>
       <summary>What is the minimum order for custom pocket ashtrays?</summary>
-      <p>We print in-house on a UV flatbed printer, so we can handle small runs for events and local businesses as well as large-volume programs for cities and corporate accounts. Contact us with your quantity for pricing.</p>
+      <p>We print in-house on a UV flatbed printer, so we can handle small runs for events and local businesses as well as large-volume programs for cities and corporate accounts. Email us at <a href="mailto:custompocketashtray@gmail.com">custompocketashtray@gmail.com</a> with your quantity for pricing.</p>
     </details>
     <details>
       <summary>Can you print our full-colour logo?</summary>
-      <p>Yes. We print full-colour artwork, gradients and fine detail directly onto the pouch with UV-cured ink. We send a digital proof for approval before production.</p>
+      <p>Yes. We print full-colour artwork, gradients and fine detail directly onto the pouch with UV-cured ink. We send a digital mock-up for your approval before anything is printed.</p>
     </details>
     <details>
       <summary>Do you work with municipalities and public tenders?</summary>
@@ -428,51 +552,20 @@ footer .brand small{color:#9fc0da}
     </details>
     <details>
       <summary>How long does production take?</summary>
-      <p>Turnaround depends on quantity and the time of year. Small runs are typically quick once the proof is approved; large program orders are scheduled with you up front. Ask for current lead times when you request a quote.</p>
+      <p>Turnaround depends on quantity and the time of year. Small runs are typically quick once your mock-up is approved, and large program orders are scheduled with you up front. Need it fast? We can accommodate last-minute rush orders, just tell us your deadline.</p>
     </details>
   </div>
 </section>
 
 <!-- QUOTE -->
-<section class="quote" id="quote" style="background:#fff">
-  <div class="wrap quote-grid">
-    <div>
-      <span class="eyebrow">Get started</span>
-      <h2>Request a quote for custom pocket ashtrays</h2>
-      <p class="lead">Tell us about your program and we'll come back with pricing, options and lead times, usually within one business day.</p>
-      <ul class="contact-list">
-        <li><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg></div>
-          <div><b>Email</b><br><a href="mailto:sales@custompocketashtray.com">sales@custompocketashtray.com</a></div></li>
-        <li><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11"/></svg></div>
-          <div><b>Municipal &amp; corporate accounts</b><br><span style="color:var(--muted)">Formal quotes and RFQ responses available on request.</span></div></li>
-      </ul>
-    </div>
-    <form id="quoteForm" novalidate>
-      <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
-      <div><label for="org">Organization</label><input id="org" name="organization" autocomplete="organization"></div>
-      <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-      <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-      <div><label for="type">Organization type</label>
-        <select id="type" name="type">
-          <option>Municipality / Regional District</option>
-          <option>Business Improvement Area</option>
-          <option>Parks / Environmental Group</option>
-          <option>Event / Festival / Venue</option>
-          <option>Corporate / Promotional</option>
-          <option>Other</option>
-        </select></div>
-      <div><label for="qty">Estimated quantity</label>
-        <select id="qty" name="quantity">
-          <option>Under 250</option>
-          <option>250 – 1,000</option>
-          <option>1,000 – 5,000</option>
-          <option>5,000 – 25,000</option>
-          <option>25,000+</option>
-        </select></div>
-      <div class="full"><label for="msg">Tell us about your project</label>
-        <textarea id="msg" name="message" placeholder="Timeline, distribution plan, artwork, number of designs..."></textarea></div>
-      <div class="full"><button type="submit" class="btn btn-primary" style="width:100%">Send Quote Request</button></div>
-    </form>
+<section class="cta" id="quote">
+  <div class="wrap">
+    <span class="eyebrow">Ready to order?</span>
+    <h2>Send us your artwork to get started</h2>
+    <p class="lead" style="margin:0 auto 2rem">Email us your logo, quantity and deadline, and we'll reply with a digital mock-up and pricing. Rush orders welcome.</p>
+    <a class="btn btn-primary" href="mailto:custompocketashtray@gmail.com?subject=Custom%20Pocket%20Ashtray%20Order">Email Your Artwork</a>
+    <a class="email" href="mailto:custompocketashtray@gmail.com">custompocketashtray@gmail.com</a>
+    <small>Municipal &amp; corporate accounts: formal quotes and RFQ responses available on request.</small>
   </div>
 </section>
 
@@ -482,7 +575,7 @@ footer .brand small{color:#9fc0da}
   <div class="wrap row">
     <a href="#top" class="brand"><img src="images/icon.png" alt="" width="40" height="40"><span>Custom<small>Pocket Ashtrays</small></span></a>
     <div>Custom printed pocket ashtrays for cities, events &amp; brands.</div>
-    <div><a href="mailto:sales@custompocketashtray.com">sales@custompocketashtray.com</a></div>
+    <div><a href="mailto:custompocketashtray@gmail.com">custompocketashtray@gmail.com</a></div>
   </div>
   <div class="wrap" style="margin-top:18px;font-size:.82rem;opacity:.7">&copy; <span id="yr"></span> Custom Pocket Ashtrays. All rights reserved.</div>
 </footer>
@@ -504,16 +597,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     });
   }, { rootMargin: '200px' }).observe(vid);
 })();
-// Simple mailto handoff until a form backend (Formspree, Netlify Forms, etc.) is connected.
-document.getElementById('quoteForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = this, v = function (n) { return (f.elements[n].value || '').trim(); };
-  if (!v('name') || !v('email')) { alert('Please add your name and email.'); return; }
-  var body = 'Name: ' + v('name') + '\nOrganization: ' + v('organization') + '\nEmail: ' + v('email') +
-    '\nPhone: ' + v('phone') + '\nType: ' + v('type') + '\nQuantity: ' + v('quantity') + '\n\n' + v('message');
-  window.location.href = 'mailto:sales@custompocketashtray.com?subject=' +
-    encodeURIComponent('Pocket Ashtray Quote - ' + (v('organization') || v('name'))) + '&body=' + encodeURIComponent(body);
-});
 </script>
 </body>
 </html>
